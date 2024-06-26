@@ -37,7 +37,7 @@ public class EmployeeServiceImpl implements EmployeeService {
                     .department(employeeDTO.getDepartment())
                     .build();
             employeeRepository.save(employee);
-            return new ResponseEntity<>("Employee created successfully", HttpStatus.CREATED);
+            return new ResponseEntity<>("Employee created successfully", HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(), HttpStatus.BAD_REQUEST);
         }
