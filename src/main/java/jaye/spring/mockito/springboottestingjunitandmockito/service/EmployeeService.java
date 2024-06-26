@@ -6,4 +6,5 @@ import org.springframework.http.ResponseEntity;
 public interface EmployeeService {
     ResponseEntity createEmployee(EmployeeDTO employeeDTO);
 
+    ResponseEntity findEmployee(String empId);
 }

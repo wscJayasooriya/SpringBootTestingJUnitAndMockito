@@ -20,4 +20,9 @@ public class EmployeeController {
     public ResponseEntity createEmployee(@RequestBody EmployeeDTO employeeDTO) {
         return employeeService.createEmployee(employeeDTO);
     }
+
+    @GetMapping(value = "/find/{empId}", produces = "application/json")
+    public ResponseEntity findEmployee(@PathVariable("empId") String empId) {
+        return employeeService.findEmployee(empId);
+    }
 }
